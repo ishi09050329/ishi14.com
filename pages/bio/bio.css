@@ -361,3 +361,44 @@ html {
         gap: 8px;
     }
 }
+
+/* ABOUT profile table improvements */
+.about-main {
+    max-width: 100%;
+}
+
+.about-section {
+    max-width: 760px;
+}
+
+.profile-list {
+    border-top: 1px solid var(--line);
+}
+
+.profile-item {
+    align-items: baseline;
+    transition: background-color 0.2s ease;
+}
+
+.profile-item span {
+    letter-spacing: 0.04em;
+}
+
+.profile-item p {
+    overflow-wrap: anywhere;
+}
+
+.about-section a {
+    color: inherit;
+    text-underline-offset: 5px;
+}
+
+.about-section a:hover {
+    opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+    .profile-item {
+        padding: 18px 0;
+    }
+}
