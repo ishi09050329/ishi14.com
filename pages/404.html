@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>404 | Page Not Found - ishi.</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/include.js" defer></script>
+
+    <style>
+        .error-page {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .error-code {
+            font-size: clamp(100px, 22vw, 220px);
+            font-weight: 800;
+            letter-spacing: -0.09em;
+            line-height: 1;
+            margin: 0;
+        }
+
+        .error-label {
+            font-size: 13px;
+            letter-spacing: 0.25em;
+            color: #888;
+            margin: 24px 0 12px;
+        }
+
+        .error-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 0 14px;
+        }
+
+        .error-description {
+            color: #777;
+            font-size: 14px;
+            line-height: 2;
+            margin-bottom: 36px;
+        }
+
+        .home-button {
+            display: inline-block;
+            background: #111;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 38px;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .home-button:hover {
+            background: #444;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 600px) {
+            .error-page {
+                min-height: 65vh;
+            }
+
+            .error-title {
+                font-size: 20px;
+            }
+
+            .error-description {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <main class="error-page">
+        <p class="error-code">404</p>
+        <p class="error-label">PAGE NOT FOUND</p>
+
+        <h1 class="error-title">ページが見つかりません</h1>
+
+        <p class="error-description">
+            お探しのページは移動または削除されたか、<br>
+            URLが間違っている可能性があります。
+        </p>
+
+        <a href="index.html" class="home-button">
+            BACK TO HOME
+        </a>
+    </main>
+
+    <div id="footer-container"></div>
+</body>
+
+</html>
