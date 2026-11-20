@@ -1,0 +1,11 @@
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "pages/.*\\.html$",
+        "cmd": "bash \"${workspaceFolder}/.vscode/auto-push.sh\"",
+        "autoShowOutputPanel": "error"
+      }
+    ]
+  }
+}
