@@ -4,12 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>ishi. | Personal Website</title>
+    <meta name="description" content="気象・防災に関心があり、プログラミングやWeb制作にも取り組むishiの個人サイトです。">
+
 </head>
 
 <body>
-    <h1>ishi14.com</h1>
-    <p>てすと2</p>
+
+    <header class="header">
+        <a href="#" class="logo">ishi.</a>
+
+        <nav class="nav">
+            <a href="#about">ABOUT</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#activities">ACTIVITIES</a>
+            <a href="#blog">BLOG</a>
+        </nav>
+
+        <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main>
+        <p class="welcome">WELCOME TO MY WEBSITE</p>
+
+        <h1>ishi</h1>
+
+        <p class="description">
+            気象・防災に関心があり、<br>
+            プログラミングやWeb制作にも取り組んでいます。
+        </p>
+    </main>
 </body>
+<script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
+
+    menuToggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("active");
+
+        menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "メニューを閉じる" : "メニューを開く"
+        );
+    });
+
+    nav.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            nav.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "メニューを開く");
+        });
+    });
+</script>
 
 </html>
