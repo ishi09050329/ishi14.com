@@ -285,3 +285,79 @@ html {
         font-size: 56px;
     }
 }
+
+/* About page */
+.about-main {
+    justify-content: flex-start;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.about-section {
+    max-width: 760px;
+    width: 100%;
+    margin-top: 75px;
+}
+
+.about-label {
+    color: var(--sub);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    margin-bottom: 18px;
+}
+
+.about-section h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 22px;
+    letter-spacing: -0.03em;
+}
+
+.about-section > p:last-child {
+    color: var(--sub);
+    font-size: 15px;
+    line-height: 2.2;
+}
+
+.profile-list {
+    border-top: 1px solid var(--line);
+}
+
+.profile-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.profile-item span {
+    color: var(--sub);
+    font-size: 13px;
+}
+
+.profile-item p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+    .about-main {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .about-section {
+        margin-top: 55px;
+    }
+
+    .about-section h2 {
+        font-size: 23px;
+    }
+
+    .profile-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+}
