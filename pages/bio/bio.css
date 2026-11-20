@@ -249,3 +249,39 @@ html {
     color: #999999;
 }
 
+
+/* Subpages */
+.subpage-main {
+    min-height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 12%;
+}
+
+.subpage-title {
+    margin: 0;
+    font-size: clamp(56px, 10vw, 100px);
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    line-height: 1.1;
+}
+
+.subpage-main .bio-welcome {
+    margin-bottom: 25px;
+}
+
+.subpage-main .bio-divider {
+    margin: 35px 0;
+}
+
+@media (max-width: 600px) {
+    .subpage-main {
+        min-height: 75vh;
+        padding: 80px 8%;
+    }
+
+    .subpage-title {
+        font-size: 56px;
+    }
+}
