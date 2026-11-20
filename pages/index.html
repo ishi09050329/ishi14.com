@@ -7,30 +7,16 @@
 
     <title>ishi. | Personal Website</title>
 
-
-
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/include.js" defer></script>
 </head>
 
 <body>
 
+    <!-- 共通ヘッダー -->
+    <div id="header-container"></div>
 
-    <header class="header">
-        <a href="#" class="logo">ishi.</a>
-
-        <nav class="nav">
-            <a href="#about">ABOUT</a>
-            <a href="#projects">PROJECTS</a>
-            <a href="#activities">ACTIVITIES</a>
-            <a href="#blog">BLOG</a>
-        </nav>
-
-        <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header>
-
+    <!-- ページ内容 -->
     <main>
         <p class="welcome">WELCOME TO MY WEBSITE</p>
 
@@ -41,28 +27,10 @@
             プログラミングやWeb制作にも取り組んでいます。
         </p>
     </main>
+
+    <!-- 共通フッター -->
+    <div id="footer-container"></div>
+
 </body>
-<script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector(".nav");
-
-    menuToggle.addEventListener("click", () => {
-        const isOpen = nav.classList.toggle("active");
-
-        menuToggle.setAttribute("aria-expanded", isOpen);
-        menuToggle.setAttribute(
-            "aria-label",
-            isOpen ? "メニューを閉じる" : "メニューを開く"
-        );
-    });
-
-    nav.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-            nav.classList.remove("active");
-            menuToggle.setAttribute("aria-expanded", "false");
-            menuToggle.setAttribute("aria-label", "メニューを開く");
-        });
-    });
-</script>
 
 </html>
