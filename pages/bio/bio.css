@@ -89,3 +89,163 @@ body {
         font-size: 13px;
     }
 }
+
+/* Header */
+.header {
+    width: 100%;
+    min-height: 80px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.nav a {
+    color: var(--text);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    padding: 28px 20px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+}
+
+.footer p {
+    color: var(--sub);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .header {
+        min-height: 70px;
+        padding: 0 6%;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 10px;
+    }
+
+    .menu-toggle span {
+        width: 23px;
+        height: 1px;
+        background: var(--text);
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: var(--bg);
+        border-bottom: 1px solid var(--line);
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+}
+
+/* Sections */
+.bio-sections {
+    width: 100%;
+    padding: 0 12%;
+}
+
+.bio-section {
+    padding: 110px 0;
+    border-top: 1px solid var(--line);
+    scroll-margin-top: 30px;
+}
+
+.section-number {
+    margin: 0 0 24px;
+    color: var(--sub);
+    font-size: 11px;
+    letter-spacing: 0.25em;
+}
+
+.bio-section h2 {
+    margin: 0 0 30px;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 600;
+    letter-spacing: -0.04em;
+}
+
+.bio-section > p:last-child {
+    margin: 0;
+    color: var(--sub);
+    font-size: 14px;
+    line-height: 2.3;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section responsive */
+@media (max-width: 600px) {
+    .bio-sections {
+        padding: 0 8%;
+    }
+
+    .bio-section {
+        padding: 75px 0;
+    }
+
+    .bio-section h2 {
+        font-size: 34px;
+    }
+}
+
+/* Header Hover */
+.nav a {
+    transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.nav a:hover {
+    color: #999999;
+}
+
+.logo {
+    transition: color 0.25s ease;
+}
+
+.logo:hover {
+    color: #999999;
+}
+

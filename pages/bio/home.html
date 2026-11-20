@@ -7,164 +7,8 @@
     <meta name="description" content="ishiの個人ウェブサイトです。">
     <title>ishi | Personal Website</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="bio.css">
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-                "Noto Sans JP", sans-serif;
-            background: #fff;
-            color: #111;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .header {
-            width: 100%;
-            min-height: 80px;
-            padding: 0 8%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #eee;
-        }
-
-        .logo {
-            font-size: 25px;
-            font-weight: 700;
-            letter-spacing: -1px;
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            gap: 36px;
-        }
-
-        .nav a {
-            font-size: 11px;
-            letter-spacing: 2px;
-            transition: opacity 0.2s;
-        }
-
-        .nav a:hover {
-            opacity: 0.5;
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        .bio-main {
-            min-height: 78vh;
-            padding: 100px 12%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .bio-welcome {
-            margin-bottom: 24px;
-            color: #888;
-            font-size: 11px;
-            letter-spacing: 4px;
-        }
-
-        .bio-title {
-            font-size: clamp(64px, 12vw, 120px);
-            font-weight: 700;
-            letter-spacing: -6px;
-            line-height: 1.1;
-        }
-
-        .bio-divider {
-            width: 40px;
-            height: 2px;
-            margin: 35px 0;
-            background: #111;
-        }
-
-        .bio-description {
-            color: #666;
-            font-size: 14px;
-            line-height: 2.4;
-            letter-spacing: 1px;
-        }
-
-        .footer {
-            padding: 28px 20px;
-            border-top: 1px solid #eee;
-            text-align: center;
-        }
-
-        .footer p {
-            color: #888;
-            font-size: 10px;
-            letter-spacing: 1px;
-        }
-
-        @media (max-width: 700px) {
-            .header {
-                min-height: 70px;
-                padding: 0 6%;
-            }
-
-            .menu-toggle {
-                display: flex;
-                flex-direction: column;
-                gap: 6px;
-                padding: 10px 0 10px 10px;
-            }
-
-            .menu-toggle span {
-                width: 23px;
-                height: 1px;
-                background: #111;
-            }
-
-            .nav {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                padding: 25px;
-                background: #fff;
-                border-bottom: 1px solid #eee;
-                flex-direction: column;
-                gap: 25px;
-            }
-
-            .nav.open {
-                display: flex;
-            }
-
-            .bio-main {
-                min-height: 75vh;
-                padding: 80px 7%;
-            }
-
-            .bio-title {
-                letter-spacing: -3px;
-            }
-
-            .bio-description {
-                font-size: 13px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -173,10 +17,10 @@
         <a href="/bio/home" class="logo">ishi</a>
 
         <nav class="nav" id="nav">
-            <a href="/#about">ABOUT</a>
-            <a href="/#projects">PROJECTS</a>
-            <a href="/#activities">ACTIVITIES</a>
-            <a href="/#blog">BLOG</a>
+            <a href="/bio/home#about">ABOUT</a>
+            <a href="/bio/home#projects">PROJECTS</a>
+            <a href="/bio/home#activities">ACTIVITIES</a>
+            <a href="/bio/home#blog">BLOG</a>
         </nav>
 
         <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
@@ -198,6 +42,37 @@
             プログラミングやWeb制作にも取り組んでいます。
         </p>
     </main>
+
+
+    <div class="bio-sections">
+        <section class="bio-section" id="about">
+            <p class="section-number">01 / ABOUT</p>
+            <h2>About me</h2>
+            <p>気象や防災への関心をきっかけに、<br>
+                プログラミングやWeb制作にも取り組んでいます。</p>
+        </section>
+
+        <section class="bio-section" id="projects">
+            <p class="section-number">02 / PROJECTS</p>
+            <h2>Projects</h2>
+            <p>これまでに制作したものや、<br>
+                現在取り組んでいるプロジェクトを紹介します。</p>
+        </section>
+
+        <section class="bio-section" id="activities">
+            <p class="section-number">03 / ACTIVITIES</p>
+            <h2>Activities</h2>
+            <p>興味のある分野について学びながら、<br>
+                日々さまざまな活動に取り組んでいます。</p>
+        </section>
+
+        <section class="bio-section" id="blog">
+            <p class="section-number">04 / BLOG</p>
+            <h2>Blog</h2>
+            <p>日々の記録や学んだことを、<br>
+                少しずつ発信していきます。</p>
+        </section>
+    </div>
 
     <footer class="footer">
         <p>© 2026 ishi All Rights Reserved.</p>
