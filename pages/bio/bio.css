@@ -1,0 +1,91 @@
+
+/* =========================
+   BIO PAGE
+========================= */
+
+:root {
+    --bg: #ffffff;
+    --text: #111111;
+    --sub: #777777;
+    --line: #e8e8e8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        "Noto Sans JP",
+        sans-serif;
+}
+
+/* Main */
+
+.bio-main {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 12%;
+}
+
+/* Welcome */
+
+.bio-welcome {
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: var(--sub);
+    margin-bottom: 25px;
+}
+
+/* Heading */
+
+.bio-title {
+    font-size: clamp(64px, 12vw, 140px);
+    font-weight: 800;
+    letter-spacing: -0.08em;
+    line-height: 1;
+    margin: 0 0 35px;
+}
+
+/* Description */
+
+.bio-description {
+    font-size: 15px;
+    line-height: 2.2;
+    color: var(--sub);
+    margin: 0;
+}
+
+/* Divider */
+
+.bio-divider {
+    width: 55px;
+    height: 1px;
+    background: var(--text);
+    margin: 35px 0;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    .bio-main {
+        min-height: 75vh;
+        padding: 80px 8%;
+    }
+
+    .bio-title {
+        font-size: 76px;
+    }
+
+    .bio-description {
+        font-size: 13px;
+    }
+}
