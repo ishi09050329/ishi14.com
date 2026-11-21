@@ -402,3 +402,40 @@ html {
         padding: 18px 0;
     }
 }
+
+/* ABOUT profile table */
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid var(--line);
+    font-size: 15px;
+}
+
+.profile-table th,
+.profile-table td {
+    padding: 22px 20px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    line-height: 1.8;
+}
+
+.profile-table th {
+    width: 140px;
+    color: var(--sub);
+    font-weight: 400;
+}
+
+.profile-table td {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    .profile-table th,
+    .profile-table td {
+        padding: 16px 10px;
+    }
+
+    .profile-table th {
+        width: 100px;
+    }
+}
